@@ -46,6 +46,7 @@ const News = () => {
         return window.matchMedia("(prefers-color-scheme: dark)").matches;
     });
 
+
     // work with useeffect to controll api
     useEffect(() => {
         const apiKey = 'api_key_here'
@@ -123,7 +124,8 @@ const News = () => {
     const handlePageChange = (pageNumber) => {
         setPage(pageNumber);
     };
-
+    
+    
     return (
         //  going to define structure
         <>
@@ -154,6 +156,7 @@ const News = () => {
                         <li className={`${activeLiCategory === document.querySelector('ul.category li:nth-child(7)') ? 'text-rose-600' : 'hover:text-rose-600 hover:transition-all'}`} value="technology">Technology</li>
                     </ul>
                 </div>
+                <span className='text-sm text-rose-600'>Currently you are watching fake/static data from mocki api. Functionalities like searching news, next page will not work.</span>
 
                 {/* news will be here */}
                 <div className='w-full flex'>
