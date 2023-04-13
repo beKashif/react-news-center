@@ -48,8 +48,7 @@ const News = () => {
 
     // work with useeffect to controll api
     useEffect(() => {
-        const apiKey = 'f811ee5e20ab4227acfa348703802b84'
-        // const apiKey = 'something'
+        const apiKey = 'api_key_here'
 
         // it is for our main data
         const getTopHeadlines = async () => {
@@ -61,9 +60,9 @@ const News = () => {
                 apiKey
             };
             const response = await axios.get(
-                'https://newsapi.org/v2/top-headlines',
-                // 'https://mocki.io/v1/005a7598-0d58-44bf-bac8-80f2661e97d1',
-                {params}
+                // 'https://newsapi.org/v2/top-headlines',
+                'https://mocki.io/v1/005a7598-0d58-44bf-bac8-80f2661e97d1',
+                // {params}
             )
             setNews(response.data.articles);
             setIsLoading(false);
@@ -79,9 +78,9 @@ const News = () => {
                     apiKey
                 };
                 const response = await axios.get(
-                    // 'https://mocki.io/v1/005a7598-0d58-44bf-bac8-80f2661e97d1',
-                    'https://newsapi.org/v2/everything',
-                    {params}
+                    'https://mocki.io/v1/005a7598-0d58-44bf-bac8-80f2661e97d1',
+                    // 'https://newsapi.org/v2/everything',
+                    // {params}
                 );
                 setSearchNews(response.data.articles)
                 setIsSearchLoading(false);
